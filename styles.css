@@ -1,0 +1,82 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2em;
+}
+
+.intro, .gallery {
+    margin-bottom: 2em;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Для планшетов */
+@media (min-width: 600px) {
+    .image-container img {
+        width: calc(50% - 1em);
+    }
+}
+
+/* Для десктопов */
+@media (min-width: 900px) {
+    .image-container img {
+        width: calc(25% - 1em);
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    .intro, .gallery {
+        margin-bottom: 4em;
+    }
+}
+
+/* Для очень больших экранов */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
